@@ -9,8 +9,16 @@ module Heartwood
 
     argument :model, desc: 'Name of model (e.g. User)', required: true, type: 'string'
 
-    def say_hello
-      puts 'Hi'
+    def validate_model
+      begin
+        @model = @model.classify.constantize
+      rescue NameError
+        raise NameError.new("Could not find model from \"#{@model}\"")
+      end
+    end
+
+    def render_template
+      template 'presenter.erb', "app/presenters/#{@model.to_s.underscore}_presenter.rb"
     end
 
   end
