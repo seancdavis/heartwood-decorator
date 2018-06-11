@@ -4,7 +4,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'babel-transpiler'
 gem 'dotenv-rails'
-gem 'heartwood-icons', path: File.expand_path('../../', __dir__)
+gem 'heartwood-presenter', path: File.expand_path('../../', __dir__)
 gem 'jquery-rails'
 gem 'pry'
 gem 'rspec-rails'

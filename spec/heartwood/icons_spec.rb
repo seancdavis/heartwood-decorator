@@ -1,7 +1,7 @@
-RSpec.describe Heartwood::Icons do
+RSpec.describe Heartwood::Presenter do
 
   it 'has a version number' do
-    expect(Heartwood::Icons::VERSION).not_to be nil
+    expect(Heartwood::Presenter::VERSION).not_to be nil
   end
 
 end

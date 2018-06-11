@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'rails/generators'
 
 module Heartwood
-  module Icons
+  module Presenter
     class SpriteGenerator < Rails::Generators::Base
 
       desc "Create an SVG icon sprite file."

@@ -1,9 +1,8 @@
 PATH
   remote: .
   specs:
-    heartwood-icons (0.1.0)
-      nokogiri
-      rails (~> 5.1)
+    heartwood-presenter (0.1.0)
+      rails (~> 5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -170,7 +169,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   guard-rspec (~> 4.7, >= 4.7.0)
-  heartwood-icons!
+  heartwood-presenter!
   rake (~> 10.0)
   rspec (~> 3.0)
 

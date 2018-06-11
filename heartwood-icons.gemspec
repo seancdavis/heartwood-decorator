@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "heartwood/icons/version"
+require "heartwood/presenter/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "heartwood-icons"
-  spec.version       = Heartwood::Icons::VERSION
+  spec.name          = "heartwood-presenter"
+  spec.version       = Heartwood::Presenter::VERSION
   spec.authors       = ["Sean C Davis"]
   spec.email         = ["scdavis41@gmail.com"]
 
-  spec.summary       = %q{Icon sprite generator with helpers}
-  spec.description   = %q{Generate an SVG icon sprite file and use helpers to work with icon sets in Rails projects}
-  spec.homepage      = "https://github.com/seancdavis/heartwood-icons"
+  spec.summary       = %q{Presenter support for Ruby on Rails apps}
+  spec.description   = %q{Decorate ActiveRecord models via a simple presenter class}
+  spec.homepage      = "https://github.com/seancdavis/heartwood-presenter"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -35,6 +35,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 
-  spec.add_dependency 'nokogiri'
-  spec.add_dependency 'rails', '~> 5.1'
+  spec.add_dependency 'rails', '~> 5.0'
 end
