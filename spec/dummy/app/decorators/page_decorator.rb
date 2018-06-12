@@ -1,19 +1,22 @@
-class PageDecorator < Heartwood::Decorator::Base
+module PageDecorator # < Heartwood::Decorator::Base
 
-  raise '123'
+  extend ActiveSupport::Concern
 
-  decorates :page do
-    #
-    # Methods here will be attached directly to the Page object.
-    # This means #self can be assumed to the the object. For example:
-    #
-    # def name
-    #   title
-    # end
-    #
-    # page = Page.new(title: 'Hello World')
-    # page.name # => "Hello World"
-    #
+  included do
+    def name
+      title
+    end
   end
+
+  class_methods do
+    def hi
+      'hello'
+    end
+  end
+  # decorates :page do
+  #   def name
+  #     title
+  #   end
+  # end
 
 end
