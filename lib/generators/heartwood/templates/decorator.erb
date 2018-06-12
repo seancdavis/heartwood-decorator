@@ -1,17 +1,13 @@
-class <%= @klass %>Decorator < Heartwood::Decorator::Base
+module <%= @name %>Decorator
 
-  decorates :<%= @name %> do
-    #
-    # Methods here will be attached directly to the <%= @klass %> object.
-    # This means #self can be assumed to the the object. For example:
-    #
-    # def name
-    #   title
-    # end
-    #
-    # <%= @name %> = <%= @klass %>.new(title: 'Hello World')
-    # <%= @name %>.name # => "Hello World"
-    #
+  extend ActiveSupport::Concern
+
+  included do
+    # Instance methods go here ...
+  end
+
+  class_methods do
+    # Class methods go here ...
   end
 
 end

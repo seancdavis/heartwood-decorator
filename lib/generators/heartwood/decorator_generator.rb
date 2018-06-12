@@ -11,15 +11,15 @@ module Heartwood
 
     def validate_model
       begin
-        @klass = @model.classify.constantize
-        @name = @model.underscore
+        @name = @model.classify.constantize
+        @short_name = @model.underscore
       rescue NameError
         raise NameError.new("Could not find model from \"#{@model}\"")
       end
     end
 
     def render_template
-      template 'decorator.erb', "app/decorators/#{@name}_decorator.rb"
+      template 'decorator.erb', "app/decorators/#{@short_name}_decorator.rb"
     end
 
   end

@@ -1,22 +1,13 @@
-module PageDecorator # < Heartwood::Decorator::Base
+module PageDecorator
 
   extend ActiveSupport::Concern
 
   included do
-    def name
-      title
-    end
+    # Instance methods go here ...
   end
 
   class_methods do
-    def hi
-      'hello'
-    end
+    # Class methods go here ...
   end
-  # decorates :page do
-  #   def name
-  #     title
-  #   end
-  # end
 
 end
