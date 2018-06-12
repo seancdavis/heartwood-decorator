@@ -1,5 +1,5 @@
 module Heartwood
-  module Presenter
+  module Decorator
     VERSION = "0.1.0"
   end
 end

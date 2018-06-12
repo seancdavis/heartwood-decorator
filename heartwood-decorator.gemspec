@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "heartwood/presenter/version"
+require "heartwood/decorator/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "heartwood-presenter"
-  spec.version       = Heartwood::Presenter::VERSION
+  spec.name          = "heartwood-decorator"
+  spec.version       = Heartwood::Decorator::VERSION
   spec.authors       = ["Sean C Davis"]
   spec.email         = ["scdavis41@gmail.com"]
 
-  spec.summary       = %q{Presenter support for Ruby on Rails apps}
-  spec.description   = %q{Decorate ActiveRecord models via a simple presenter class}
-  spec.homepage      = "https://github.com/seancdavis/heartwood-presenter"
+  spec.summary       = %q{Decorator support for Ruby on Rails apps}
+  spec.description   = %q{Decorate ActiveRecord models in Ruby on Rails apps}
+  spec.homepage      = "https://github.com/seancdavis/heartwood-decorator"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

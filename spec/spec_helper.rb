@@ -1,5 +1,5 @@
 require 'bundler/setup'
-require 'heartwood/presenter'
+require 'heartwood/decorator'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

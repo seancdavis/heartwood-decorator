@@ -2,11 +2,8 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem 'babel-transpiler'
 gem 'dotenv-rails'
-gem 'heartwood-presenter', path: File.expand_path('../../', __dir__)
-gem 'jquery-rails'
+gem 'heartwood-decorator', path: File.expand_path('../../', __dir__)
 gem 'pry'
 gem 'rspec-rails'
 gem 'sqlite3'
-gem 'sprockets', '4.0.0.beta7'

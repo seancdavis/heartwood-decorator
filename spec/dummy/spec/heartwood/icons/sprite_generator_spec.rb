@@ -1,6 +1,6 @@
-require 'generators/heartwood/presenter/sprite_generator'
+require 'generators/heartwood/decorator/sprite_generator'
 
-RSpec.describe Heartwood::Presenter::SpriteGenerator do
+RSpec.describe Heartwood::Decorator::SpriteGenerator do
 
   let(:sprite_file) { 'app/assets/images/icons.svg' }
 
