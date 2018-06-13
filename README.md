@@ -1,7 +1,9 @@
 Heartwood::Decorator
 ==========
 
-TBD ...
+Heartwood's Decorator is a generator that uses ActiveSupport's concern idiom to add instance and class methods to decorate a Ruby on Rails model class.
+
+Unlike the [Draper gem](https://github.com/drapergem/draper), there's no need to call any specific methods, as the decorator's methods get included in their model's class (see below for more details).
 
 Installation
 ----------
@@ -23,7 +25,45 @@ Or install it yourself as:
 Usage
 ----------
 
-TBD ...
+To generate a new decorator, use the generator:
+
+    $ bundle exec rails g heartwood:decorator MODEL
+
+Here `MODEL` should be the name of the model you wish to decorate. You can use the underscored version (e.g. `my_model`) or the camelcased class name (e.g. `MyModel).
+
+The generator creates a file in the `app/generators` directory (e.g. a `user` generator would be created at `app/generators/user_generator.rb`).
+
+The generator also includes the generator module within the model (e.g. `include UserGenerator`).
+
+Following ActiveSupport's concern idiom, you can use the `included` and `class_methods` methods to add instance and class methods to the model. Here is an example decorating a `User` model:
+
+```ruby
+# app/models/user.rb
+class User < ApplicationRecord
+  # Assume User has a `name` attribute.
+end
+
+# app/decorators/user_decorator.rb
+module UserDecorator
+  # Instance methods use the `included` method.
+  included do
+    def first_name
+      name.split(' ').first
+    end
+  end
+
+  # Class methods use the `class_methods` method.
+  class_methods do
+    def say_hello
+      'Hello!'
+    end
+  end
+end
+
+user = User.new(name: 'Ian Malcolm')
+user.first_name # => "Ian"
+User.say_hello # => "Hello!"
+```
 
 Development
 ----------
