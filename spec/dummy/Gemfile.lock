@@ -50,14 +50,9 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     builder (3.2.3)
-    coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     diff-lcs (1.3)
-    dotenv (2.2.2)
-    dotenv-rails (2.2.2)
-      dotenv (= 2.2.2)
-      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -78,9 +73,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    pry (0.11.3)
-      coderay (~> 1.1.0)
-      method_source (~> 0.9.0)
     rack (2.0.4)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
@@ -146,9 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv-rails
   heartwood-decorator!
-  pry
   rspec-rails
   sqlite3
 
