@@ -1,4 +1,4 @@
-module PageDecorator
+module PostDecorator
 
   extend ActiveSupport::Concern
 
